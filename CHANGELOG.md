@@ -1,3 +1,27 @@
+
+## [1.0.3] - 2025-09-17
+### Added
+- Dashboard block rendering framework
+- Dashboard block loader and registration system
+- Template part discovery for Dashboard blocks
+- Integration with admin controller to render blocks
+
+### Fixed
+- Admin controller alignment with file structure and menu setup
+
+### Changed
+- Improved consistency between file structure and routing
+
+
+## [1.0.2] - 2025-09-17
+### Added
+- Contact custom post type registered.
+- Meta box support for contact details (email, status).
+- Stub for contact list table under WP admin submenu.
+- Action links for contacts (e.g. “Send Message”).
+- Basic admin notice for plugin activation status.
+- Utilities and CLI namespace wiring confirmed.
+
 ## [1.0.2] - 2025-09-17
 ### Added
 - Dashboard admin page with tabbed navigation (`Dashboard`, `Messaging`, `Contacts`)
