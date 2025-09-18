@@ -29,9 +29,9 @@ class Mock_Data
     {
         return [
             [
-                'id'      => 'abc123',
-                'name'    => 'The Echo Project',
-                'genre'   => 'Alt Rock',
+                'id' => 'abc123',
+                'name' => 'The Echo Project',
+                'genre' => 'Alt Rock',
                 'country' => 'US',
                 'spotify' => 'https://open.spotify.com/artist/abc123',
             ],

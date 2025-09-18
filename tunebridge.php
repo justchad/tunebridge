@@ -23,6 +23,9 @@ define('TUNEBRIDGE_PLUGIN_FILE', __FILE__);
 require_once TUNEBRIDGE_PATH . 'includes/ajax/Playlist_Search_Ajax.php';
 \Tunebridge\Ajax\Playlist_Search_Ajax::init();
 
+require_once __DIR__ . '/includes/ajax/Search_Artists_Ajax.php';
+\Tunebridge\Ajax\Search_Artists_Ajax::init();
+
 // 📇 Contacts System
 require_once TUNEBRIDGE_PATH . 'includes/Contacts/Contact_Post_Type.php';
 \Tunebridge\Contacts\Contact_Post_Type::init();

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1] - 2025-09-17
+
+### Changed
+- Removed redundant `includes/core/Plugin.php` file.
+- Consolidated plugin bootstrap logic into `tunebridge.php`.
+- Updated snapshot to reflect new file structure.
+
 ## [1.1.0] - 2025-09-18
 ### Added
 - Resumed development with full plugin sync from user upload
