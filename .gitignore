@@ -1,17 +1,25 @@
-# General
+# OS junk
 .DS_Store
-*.log
+__MACOSX/
 
-# Build
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Composer / node
 /vendor/
 /node_modules/
-/dist/
-/.snapshots/
 
-# WordPress
+# Dev builds / caches
+*.log
 *.zip
 *.tar.gz
-*.sql
-*.sqlite
-wp-content/uploads/
-wp-content/cache/
+*.tmp
+*.bak
+
+# Plugin-specific
+Development/
+languages/*.mo
+languages/*.po
+*.snapshot.json
