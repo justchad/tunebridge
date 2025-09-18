@@ -23,3 +23,5 @@ if (defined('WP_CLI') && WP_CLI) {
     require_once __DIR__ . '/Includes/Cli/cli_version_command.php';
     \WP_CLI::add_command('tunebridge version', \Tunebridge\Cli\Cli_Version_Command::class);
 }
+
+require_once __DIR__ . '/Includes/helpers/template_loader.php';

@@ -1,9 +1,0 @@
-Build Specific Info
-    * Use Bootstrap
-    * Use Jquery when possible and where makes sense.
-    * Use Google Fonts Montserrat for headings and headlines and Open Sans for oll other copy
-    * Use templates and template-parts when and where possible for the UI as it makes sense.
-    * Use bootstrap and bootstrap classes for the UI.
-    * Any WP user with the Administrator Role can access the plugin and its various parts.
-    * Use Mock Data for testing and before hooking up any API or like services.
-    * Use consistent data objects so that no matter what the data looks like from an api or other source it is returned consistently.

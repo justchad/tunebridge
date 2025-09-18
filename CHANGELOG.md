@@ -1,3 +1,8 @@
+## [1.0.4] - 2025-09-18
+### Changed
+- Removed redundant `dashboard_tabs.php` template.
+- Confirmed `tabs.php` is the correct version for dashboard tab rendering.
+- Cleaned up and verified file structure to align with active plugin structure.
 
 ## [1.0.3] - 2025-09-17
 ### Added
