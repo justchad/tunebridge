@@ -24,7 +24,14 @@ class Cli_Version_Command
      */
     public function get()
     {
-        \WP_CLI::success('TuneBridge version: ' . TUNEBRIDGE_VERSION);
+        $plugin_file = plugin_dir_path(__FILE__) . '/../Core/plugin.php';
+        $contents = file_get_contents($plugin_file);
+
+        if (preg_match("/const VERSION\s*=\s*'([^']+)'/", $contents, $matches)) {
+            \WP_CLI::success("TuneBridge version: " . $matches[1]);
+        } else {
+            \WP_CLI::error('Version constant not found.');
+        }
     }
 
     /**
