@@ -1,0 +1,9 @@
+Source Control
+    GitHub
+        * Github Repository: git@github.com:justchad/tunebridge.git
+        * Repository Working Branch: Development
+    Changelog
+        * Starting Version: 1.0.0
+    Snapshot
+        * Filename: tunebridge.snapshot.jsonsour
+

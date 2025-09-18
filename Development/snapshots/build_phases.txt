@@ -1,0 +1,17 @@
+Build Phases
+    * Build Phase 1 : Order not specific.
+        * Create the Admin sidebar menu with nested pages.
+        * Build out all plugin base and ui elements stubbing out everything.
+        * Build out all custom post types.
+        * Build out all user roles and permissions for the plugin, a WP administrator has access to the plugin and all rights
+        * Build out all templates and template-parts as required.
+        * Build out all settings for the Plugin
+        * Build out the branded header containing the logo that goes on every page the plugin displays
+
+    * Build Phase 2 : Order not specific.
+        * Build out the dashboard
+        * Build out the dashboard tabs
+        * Build out the dashboard UI and the user specific dashboard layouts and reordering on the page.
+        * Build out the dashboard column layout.
+
+    WILL ADD MORE BUILD PHASES.

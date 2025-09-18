@@ -1,0 +1,17 @@
+# General
+.DS_Store
+*.log
+
+# Build
+/vendor/
+/node_modules/
+/dist/
+/.snapshots/
+
+# WordPress
+*.zip
+*.tar.gz
+*.sql
+*.sqlite
+wp-content/uploads/
+wp-content/cache/

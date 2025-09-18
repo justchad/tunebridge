@@ -1,61 +1,25 @@
 <?php
 
 /**
- * Plugin Name:     TuneBridge
- * Plugin URI:      https://chatgpt.com/g/g-6cqBCrKTn-wp-plugin-architect
- * Description:     Research and outreach tool for music platforms and playlists.
- * Version:         1.1.1
- * Author:          WP Plugin Architect
- * Author URI:      https://chatgpt.com/g/g-6cqBCrKTn-wp-plugin-architect
- * Text Domain:     tunebridge
- * Domain Path:     /languages
+ * Plugin Name:       TuneBridge
+ * Plugin URI:        https://github.com/justchad/tunebridge
+ * Description:       Research and outreach tool for music platforms and playlists.
+ * Version:           1.0.0
+ * Author:            Chad McElwain
+ * Author URI:        https://github.com/justchad
+ * Text Domain:       tunebridge
+ * Domain Path:       /languages
  */
 
 defined('ABSPATH') || exit;
 
-// 🔧 Core Constants
-define('TUNEBRIDGE_VERSION', '1.1.1');
-define('TUNEBRIDGE_PATH', plugin_dir_path(__FILE__));
-define('TUNEBRIDGE_URL', plugin_dir_url(__FILE__));
-define('TUNEBRIDGE_PLUGIN_FILE', __FILE__);
+require_once __DIR__ . '/Includes/Core/plugin.php';
+\Tunebridge\Core\Plugin::init();
 
-// 🧠 Core
-require_once TUNEBRIDGE_PATH . 'includes/ajax/Playlist_Search_Ajax.php';
-\Tunebridge\Ajax\Playlist_Search_Ajax::init();
+require_once __DIR__ . '/Includes/Admin/admin.php';
+\Tunebridge\Admin\Admin::init();
 
-require_once __DIR__ . '/includes/ajax/Search_Artists_Ajax.php';
-\Tunebridge\Ajax\Search_Artists_Ajax::init();
-
-// 📇 Contacts System
-require_once TUNEBRIDGE_PATH . 'includes/Contacts/Contact_Post_Type.php';
-\Tunebridge\Contacts\Contact_Post_Type::init();
-
-require_once TUNEBRIDGE_PATH . 'includes/Contacts/Contact_Meta.php';
-\Tunebridge\Contacts\Contact_Meta::init();
-
-require_once TUNEBRIDGE_PATH . 'includes/Contacts/Contact_List_Table.php';
-\Tunebridge\Contacts\Contact_List_Table::init();
-
-require_once TUNEBRIDGE_PATH . 'includes/Contacts/Contact_List_Actions.php';
-\Tunebridge\Contacts\Contact_List_Actions::init();
-
-// 🔧 Utilities
-require_once TUNEBRIDGE_PATH . 'includes/Utilities/Admin_Notices.php';
-\Tunebridge\Utilities\Admin_Notices::init();
-
-// 🖥️ Admin
-if (is_admin()) {
-	require_once TUNEBRIDGE_PATH . 'includes/admin/Admin.php';
-	\Tunebridge\Admin\Admin::init();
-}
-
-// ⚙️ CLI
 if (defined('WP_CLI') && WP_CLI) {
-	require_once TUNEBRIDGE_PATH . 'includes/cli/CLI_Version_Command.php';
-	\WP_CLI::add_command('tunebridge version', \Tunebridge\CLI\CLI_Version_Command::class);
-}
-
-// ✅ Load any helper files
-foreach (glob(TUNEBRIDGE_PATH . 'includes/helpers/*.php') as $helper_file) {
-	require_once $helper_file;
+    require_once __DIR__ . '/Includes/Cli/cli_version_command.php';
+    \WP_CLI::add_command('tunebridge version', \Tunebridge\Cli\Cli_Version_Command::class);
 }

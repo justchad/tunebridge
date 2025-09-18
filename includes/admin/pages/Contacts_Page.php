@@ -8,6 +8,6 @@ class Contacts_Page
 {
     public static function render()
     {
-        echo '<div class="wrap"><h1>Contacts (Coming Soon)</h1></div>';
+        echo '<div class="wrap"><h1>Contacts</h1></div>';
     }
 }
